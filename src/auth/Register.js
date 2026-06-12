@@ -61,7 +61,7 @@ function Register() {
                 />
 
                 <button className="btn btn-primary" >Create Account</button> <br />
-                <p>If you have an account <Link to="/login">Login</Link></p>
+                <p>If you have an account <Link to="/mcqapp/login">Login</Link></p>
             </form>
         </div>
     );

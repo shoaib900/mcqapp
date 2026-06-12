@@ -19,12 +19,12 @@ const App = () => {
     <Router>
       <div>
         <Routes>
-          <Route path="*" element={ user ? <Quiz /> : <Navigate to="/login" /> } />
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/result" element={<Result />} />
+          <Route path="*" element={ user ? <Quiz /> : <Navigate to="/mcqapp/login" /> } />
+          <Route path="/mcqapp/register" element={<Register />} />
+          <Route path="/mcqapp/login" element={<Login />} />
+          <Route path="/mcqapp/result" element={<Result />} />
           {/* <Route path="/admin" element={ <Admin /> } /> */}
-          <Route default path="/" element={<Quiz /> } />
+          <Route default path="/mcqapp/home" element={<Quiz /> } />
 
         </Routes>
       </div>

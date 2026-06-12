@@ -61,7 +61,7 @@ function Quiz() {
         // localStorage.setItem("name", name);
 
         // window.location.href = "/result";
-        navigate("/result");
+        navigate("/mcqapp/result");
     };
 
     return (

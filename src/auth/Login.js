@@ -22,7 +22,7 @@ function Login() {
         );
 
 
-        navigate("/");
+        navigate("/mcqapp/home");
     };
 
     return (
@@ -51,7 +51,7 @@ function Login() {
                     </div>
 
                     <button className="btn btn-primary">Login</button> <br />
-                    <p>if you have no account <Link to="/register">Register</Link></p>
+                    <p>if you have no account <Link to="/mcqapp/register">Register</Link></p>
                 </form>
             </div>
     );
