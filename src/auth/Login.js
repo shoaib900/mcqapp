@@ -20,7 +20,7 @@ function Login() {
             email,
             password
         );
-        
+
 
         navigate("/");
         alert("Login Successful");

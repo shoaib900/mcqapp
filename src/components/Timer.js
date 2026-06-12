@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 function Timer({ submitQuiz }) {
-  const [time, setTime] = useState(15000);
+  const [time, setTime] = useState(1320);
 
   useEffect(() => {
     const interval = setInterval(() => {

@@ -53,10 +53,10 @@ function Quiz() {
     };
 
     return (
-        <div style={{ height: "100vh",paddingTop:"10px", width: "100%", background: "linear-gradient(90deg,rgba(17, 68, 92, 1) 0%, rgba(156, 20, 140, 1) 50%)" }}>
+        <div style={{ height: "100vh", paddingTop: "10px", width: "100%", background: "linear-gradient(90deg,rgba(17, 68, 92, 1) 0%, rgba(156, 20, 140, 1) 50%)" }}>
             <div className="container">
 
-                <Timer submitQuiz={submitQuiz}/>
+                <Timer submitQuiz={submitQuiz} />
 
                 <input className="form-control mb-3 mt-5"
                     type="text"
@@ -88,9 +88,13 @@ function Quiz() {
                     </div>
                 ))}
 
-                <button onClick={submitQuiz} className="btn btn-primary mb-5">
+                {name == "" || null ? <button disabled className="btn btn-secondary mb-5">
                     Submit
-                </button>
+                </button> :
+                    <button onClick={submitQuiz} className="btn btn-primary mb-5">
+                        Submit
+                    </button>
+                }
             </div>
         </div>
     );

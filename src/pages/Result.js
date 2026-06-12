@@ -17,6 +17,9 @@ function Result() {
 
   return (
     <div className="d-flex justify-content-center align-items-center" style={{ height: "100vh", width: "100%", background: "linear-gradient(90deg,rgba(17, 68, 92, 1) 0%, rgba(156, 20, 140, 1) 50%)" }}>
+
+      
+
       <h1 style={{ color: "white" }}>
         Result
       </h1>
