@@ -8,7 +8,7 @@ function Result() {
     localStorage.getItem("name");
 
   const whatsappShare = () => {
-    const text = `my name is ${name}   \n *Test 01* \n I scored ${score}/${total} in MCQ Test`;
+    const text = `my name is *${name}*   \n\n *Test 01* \n\n I scored *${score} / ${total}* in MCQ Test`;
 
     window.open(
       `https://wa.me/?text=${encodeURIComponent(text)}`
@@ -20,9 +20,7 @@ function Result() {
 
       
 
-      <h1 style={{ color: "white" }}>
-        Result
-      </h1>
+      <h1 style={{ color: "white" }}>&nbsp; &nbsp; Your Result : </h1> &nbsp; &nbsp;
 
       <h2 style={{ color: "white" }}>
         {score} / {total}

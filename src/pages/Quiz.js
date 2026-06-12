@@ -2,6 +2,7 @@ import {
     collection,
     getDocs,
     addDoc,
+    setDoc,
 } from "firebase/firestore";
 
 import { db } from "../auth/fbconfig";
@@ -32,7 +33,7 @@ function Quiz() {
         );
     };
 
-    const submitQuiz = (e) => {
+    const submitQuiz = async (e) => {
 
         let score = 0;
 
@@ -41,23 +42,28 @@ function Quiz() {
                 score++;
         });
 
-
+        localStorage.setItem("name", name);
         localStorage.setItem("score", score);
         localStorage.setItem(
             "total",
             questions.length
         );
+
+        await addDoc(collection(db, "results"), {
+            name,
+            score,
+            total: questions.length,
+            date: new Date().toLocaleString()
+        });
         // localStorage.setItem("name", name);
 
         window.location.href = "/result";
     };
 
     return (
-        <div style={{ height: "100vh", paddingTop: "10px", width: "100%", background: "linear-gradient(90deg,rgba(17, 68, 92, 1) 0%, rgba(156, 20, 140, 1) 50%)" }}>
+        <div style={{ minHeight: "100vh", paddingTop: "10px", width: "100%", background: "linear-gradient(90deg,rgba(17, 68, 92, 1) 0%, rgba(156, 20, 140, 1) 50%)" }}>
+            <Timer submitQuiz={submitQuiz} />
             <div className="container">
-
-                <Timer submitQuiz={submitQuiz} />
-
                 <input className="form-control mb-3 mt-5"
                     type="text"
                     placeholder="Enter your full name"
@@ -65,12 +71,12 @@ function Quiz() {
                     onChange={(e) => setName(e.target.value)}
                 />
 
-                {questions.map((q) => (
+                {questions.map((q, i) => (
                     <div key={q.id} className="bg-white my-3 p-3 rounded">
-                        <h3>{q.question}</h3>
+                        <h3> {i + 1}. {q.question}</h3>
 
                         {q.options.map((op) => (
-                            <label key={op} style={{ marginRight: "60px" }}>
+                            <label key={op} style={{ marginRight: "80px" }}>
                                 <input
                                     required
                                     type="radio"
@@ -82,7 +88,7 @@ function Quiz() {
                                             [q.id]: op
                                         })
                                     }
-                                />
+                                /> &nbsp;
                                 {op}
                             </label>
                         ))}

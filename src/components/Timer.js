@@ -19,7 +19,7 @@ function Timer({ submitQuiz }) {
   }, []);
 
   return (
-    <h2 className="text-white text-center mt-3">
+    <h2 className="text-white bg-success d-inline position-fixed p-2 rounded top-0 end-0 m-3">
       Time Left:
       {Math.floor(time / 60)}:
       {time % 60}
