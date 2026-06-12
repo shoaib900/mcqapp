@@ -19,12 +19,12 @@ const App = () => {
     <Router>
       <div>
         <Routes>
+          <Route path="*" element={ user ? <Quiz /> : <Navigate to="/login" /> } />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/result" element={<Result />} />
           {/* <Route path="/admin" element={ <Admin /> } /> */}
-          <Route path="/" element={<Quiz /> } />
-          <Route path="*" element={ user ? <Quiz /> : <Navigate to="/login" /> } />
+          <Route default path="/" element={<Quiz /> } />
 
         </Routes>
       </div>
