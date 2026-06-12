@@ -22,7 +22,7 @@ function Login() {
         );
 
 
-        navigate("/mcqapp");
+        navigate("/");
     };
 
     return (
