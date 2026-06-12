@@ -23,7 +23,6 @@ function Login() {
 
 
         navigate("/");
-        alert("Login Successful");
     };
 
     return (

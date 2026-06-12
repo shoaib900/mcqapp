@@ -72,6 +72,7 @@ function Quiz() {
                         {q.options.map((op) => (
                             <label key={op} style={{ marginRight: "60px" }}>
                                 <input
+                                    required
                                     type="radio"
                                     name={q.id}
                                     value={op}

@@ -44,7 +44,7 @@ function Register() {
             <form onSubmit={signup} className="w-50 border p-4 shadow card " >
                 <h2 className="mb-4 text-center">Register</h2>
                 <input className="form-control mb-3"
-                    placeholder="Username"
+                    placeholder="Username / full name"
                     onChange={(e) => setUsername(e.target.value)}
                 />
 
