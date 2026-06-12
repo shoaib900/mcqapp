@@ -9,11 +9,14 @@ import { db } from "../auth/fbconfig";
 
 import { useEffect, useState } from "react";
 import Timer from "../components/Timer";
+import { useNavigate } from "react-router-dom";
 
 function Quiz() {
     const [questions, setQuestions] = useState([]);
     const [answers, setAnswers] = useState({});
     const [name, setName] = useState("");
+
+    const navigate = useNavigate();
 
 
 
@@ -57,7 +60,8 @@ function Quiz() {
         });
         // localStorage.setItem("name", name);
 
-        window.location.href = "/result";
+        // window.location.href = "/result";
+        navigate("/result");
     };
 
     return (
