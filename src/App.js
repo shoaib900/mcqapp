@@ -21,7 +21,7 @@ const App = () => {
     <Router>
       <div>
         <Routes>
-          <Route path="*" element={ user ? <Quiz /> : <Navigate to="/mcqapp/login" /> } />
+          <Route path="*" element={ user ? <Home /> : <Navigate to="/mcqapp/login" /> } />
           <Route path="/mcqapp/register" element={<Register />} />
           <Route path="/mcqapp/login" element={<Login />} />
           <Route path="/mcqapp/result" element={<Result />} />
