@@ -4,10 +4,12 @@ import { Navigate, BrowserRouter as Router, Route, Routes } from "react-router-d
 
 import Register from './auth/Register'
 import Quiz from './pages/Quiz'
+import Quiz2 from './pages/Quiz2'
 import Result from './pages/Result'
 import Login from './auth/Login'
 import {auth} from './auth/fbconfig';
 import Admin from './pages/Admin';
+import Home from './pages/Home';
 
 
 
@@ -24,8 +26,9 @@ const App = () => {
           <Route path="/mcqapp/login" element={<Login />} />
           <Route path="/mcqapp/result" element={<Result />} />
           {/* <Route path="/admin" element={ <Admin /> } /> */}
-          <Route default path="/mcqapp/home" element={<Quiz /> } />
-
+          <Route path="/mcqapp/quiz1" element={<Quiz />} />
+          <Route path="/mcqapp/quiz2" element={<Quiz2 />} />
+          <Route path="/mcqapp/home" element={<Home /> } />
         </Routes>
       </div>
     </Router>
