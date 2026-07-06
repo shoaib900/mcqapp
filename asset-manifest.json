@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/mcqapp/static/css/main.a240c550.css",
-    "main.js": "/mcqapp/static/js/main.1c45360b.js",
+    "main.js": "/mcqapp/static/js/main.8e4dd77a.js",
     "static/js/453.6dd65a67.chunk.js": "/mcqapp/static/js/453.6dd65a67.chunk.js",
     "index.html": "/mcqapp/index.html",
     "main.a240c550.css.map": "/mcqapp/static/css/main.a240c550.css.map",
-    "main.1c45360b.js.map": "/mcqapp/static/js/main.1c45360b.js.map",
+    "main.8e4dd77a.js.map": "/mcqapp/static/js/main.8e4dd77a.js.map",
     "453.6dd65a67.chunk.js.map": "/mcqapp/static/js/453.6dd65a67.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a240c550.css",
-    "static/js/main.1c45360b.js"
+    "static/js/main.8e4dd77a.js"
   ]
 }
